@@ -32,7 +32,7 @@ var l=a.responseText
 o=l.split("\n"),o=X(o),_("messageText").innerHTML="<b>A few words from us...</b>",N(_("messageText"),500)
 var c=0
 changeId=setInterval(function(){O(_("messageText"),500),setTimeout(r,500)},7e3)}},a.send()}function Z(t){var e=t.length<24?"forUsername":"id"
-url1="https://www.googleapis.com/youtube/v3/channels?part=statistics&"+e+"="+t+"&fields=items/statistics/viewCount&key="+keys[whichone]
+url1="https://www.googleapis.com/youtube/v3/channels?part=statistics&"+i+"="+t+"&fields=items/statistics/viewCount&key="+keys[whichone]
 var n=new XMLHttpRequest
 n.open("GET",url1,!0),n.onload=function(){if(n.status>=400)if(74==GG()){var e=Math.floor(3*Math.random())
 alert("API quota exceeded. You will be redirected to another sub counter."),window.location=altCounters[e]+channel+altExt[e]}else{keysUsed>16&&(_("updateText").innerHTML="<i>updated every "+upInt+" seconds</i>",clearInterval(upId1),upId1=setInterval(function(){Z(t)},1e3*upInt)),++whichone,whichone%=74
